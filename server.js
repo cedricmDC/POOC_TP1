@@ -25,7 +25,10 @@ app.get('/hello/:name', (request, response) => {
   //De la même manière nous transformons notre fichier hello.mustache en HTML en passant des paramètres.
   response.render('hello', {name: request.params.name});
 })
-
+app.get('/pooc/:text', (request, response) => {
+  //De la même manière nous transformons notre fichier hello.mustache en HTML en passant des paramètres.
+  response.render('pooc', {name: request.params.text});
+})
 app.listen(port, (err) => {
   if (err) {
     return console.log('Erreur du serveur : ', err)
