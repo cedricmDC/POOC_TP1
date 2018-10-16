@@ -60,3 +60,6 @@ app.listen(port, (err) => {
 process.on('SIGINT', () => {
   led.unexport();
 });
+process.on('SIGINT', () => {
+  led2.unexport();
+});
